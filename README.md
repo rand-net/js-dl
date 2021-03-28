@@ -1,7 +1,7 @@
 # js-dl
 * A trivial python script to download javascript libraries from https://cdnjs.com.
 
-![PyPI](https://img.shields.io/pypi/v/khan-dl?style=flat-square)
+![PyPI](https://img.shields.io/pypi/v/js-dl?style=flat-square)
 
 # Usage
 ```
