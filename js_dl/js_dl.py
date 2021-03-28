@@ -72,17 +72,22 @@ class JS_DL:
         )
         return library_download_url, selected_library_file
 
-    def download_lib_file(self, library_download_url, selected_library_file):
+    def download_lib_file(
+        self, library_download_url, selected_library_file, sel_library, sel_version
+    ):
         print(library_download_url)
         file_content = requests.get(library_download_url).text
         with open(selected_library_file, "w") as f:
             f.write(file_content)
-
-
-js_dl = JS_DL(
-    "https://api.cdnjs.com/libraries", "https://cdnjs.cloudflare.com/ajax/libs"
-)
-sel_library = js_dl.list_all_libs()
-sel_version = js_dl.select_lib_version(sel_library)
-(lib_down_url, selected_library_file) = js_dl.get_lib_file_url(sel_library, sel_version)
-js_dl.download_lib_file(lib_down_url, selected_library_file)
+        # Write to a external file for later use
+        with open("js_libraries.txt", "a+") as f2:
+            f2.write(
+                "\n"
+                + sel_library
+                + ","
+                + sel_version
+                + ","
+                + selected_library_file
+                + ","
+                + library_download_url
+            )

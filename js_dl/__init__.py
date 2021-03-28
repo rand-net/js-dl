@@ -11,4 +11,6 @@ def main():
     (lib_down_url, selected_library_file) = js_dl.get_lib_file_url(
         sel_library, sel_version
     )
-    js_dl.download_lib_file(lib_down_url, selected_library_file)
+    js_dl.download_lib_file(
+        lib_down_url, selected_library_file, sel_library, sel_version
+    )
