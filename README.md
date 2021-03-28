@@ -27,4 +27,13 @@ Version: 6.6.1
 File: d3.min.js
 https://cdnjs.cloudflare.com/ajax/libs/d3/6.6.1/d3.min.js
 
+$ ls
+
+d3.min.js  jquery.min.js  js_libraries.txt
+
+$ cat js_libraries.txt
+
+d3,6.5.0,d3.min.js,https://cdnjs.cloudflare.com/ajax/libs/d3/6.5.0/d3.min.js
+jquery,3.5.1,jquery.min.js,https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js
+
 ```
